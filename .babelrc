@@ -1,0 +1,18 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    "transform-decorators-legacy",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "components": "./components",
+          "utils": "./utils",
+          "bindRedux":"./redux/store"
+        }
+      }
+    ],
+    ["import", { "libraryName": "antd" }]
+  ],
+  "ignore": []
+}
