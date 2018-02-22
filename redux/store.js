@@ -14,7 +14,7 @@ function configureStorePro(initialState = defaultState) {
     initialState,
     applyMiddleware(sagaMiddleware)
   )
-  sagaMiddleware.run(rootSaga)  
+  sagaMiddleware.run(rootSaga)
   return store
 }
 
@@ -24,7 +24,7 @@ function configureStoreDev(initialState = defaultState) {
     initialState,
     applyMiddleware(sagaMiddleware)
   )
-  sagaMiddleware.run(rootSaga)  
+  sagaMiddleware.run(rootSaga)
   return store
 }
 

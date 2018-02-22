@@ -1,11 +1,8 @@
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {Input,Button,Row,Col,List,Avatar} from 'antd'
-const Search = Input.Search
+import { List, Avatar } from 'antd'
 
-const Searcher = (props)=>{
-  const handleClick = ()=>{
-    console.log(Button);
-  }
+const DataList = (props) => {
   return (
     <section>
       <div className="label">这是一个列表</div>
@@ -22,7 +19,7 @@ const Searcher = (props)=>{
           </List.Item>
         )}
       />
-    <style jsx>{`
+      <style jsx>{`
       .label{
         color:red;
         margin-top:30px;
@@ -40,7 +37,15 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 const mapStateToProps = (state) => {
-  return state;
+  return state
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Searcher)
+DataList.propTypes = {
+  data: PropTypes.array
+}
+
+DataList.defaultProps = {
+  data: []
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DataList)

@@ -1,0 +1,25 @@
+module.exports = {
+  parser: "babel-eslint",
+  extends: [
+    'airbnb',
+  ],
+  rules: {
+    'semi': [1, 'never'],
+    'comma-dangle': 0,
+    'arrow-body-style': 0,
+    'prefer-destructuring': 0,
+    'import/first': 0,
+    'import/no-unresolved': 0,
+    'import/extensions': 0,
+    'object-curly-newline': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'react/prefer-stateless-function': 0,
+    'react/react-in-jsx-scope': 0,
+    'react/jsx-filename-extension': 0,
+    'react/forbid-prop-types': 0,
+    'react/prop-types': 0,
+    'no-console': 1,
+    'no-unused-vars':1,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+  },
+}

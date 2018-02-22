@@ -1,5 +1,3 @@
-import { GET_LIST } from '../actions'
-
 const initialState = {
   user: 'zhengqingxin'
 }

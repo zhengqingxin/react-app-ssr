@@ -4,13 +4,13 @@ import flush from 'styled-jsx/server'
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const { html, head, errorHtml, chunks } = renderPage()
-    const styles = flush()
-    return { html, head, errorHtml, chunks, styles }
+    // const styles = flush()
+    return { html, head, errorHtml, chunks }
   }
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <link href="http://lib.baomitu.com/antd/3.2.1/antd.min.css" rel="stylesheet" />
         </Head>

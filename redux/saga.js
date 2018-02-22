@@ -4,7 +4,7 @@ import request from 'utils/request'
 import config from 'utils/config'
 
 function* getList(action) {
-  let list = yield call(request, {
+  const list = yield call(request, {
     url: config.api.getFavoriteByUser,
     data: action.payload
   })

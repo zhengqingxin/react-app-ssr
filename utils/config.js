@@ -1,6 +1,6 @@
 module.exports = {
-  baseURL:'https://api.github.com/',
-  api:{
-    getFavoriteByUser:'/users/:user/starred',
+  baseURL: 'https://api.github.com/',
+  api: {
+    getFavoriteByUser: '/users/:user/starred',
   }
 }
