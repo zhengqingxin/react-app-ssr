@@ -1,5 +1,13 @@
 import Link from 'next/link'
+import NProgress from 'nprogress'
+import Router from 'next/router'
 
+Router.onRouteChangeStart = (url) => {
+  console.log(`redirect to ${url}`)
+  NProgress.start()
+}
+Router.onRouteChangeComplete = () => NProgress.done()
+Router.onRouteChangeError = () => NProgress.done()
 
 export default () => {
   return (

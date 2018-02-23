@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
         <Head>
           {this.props.styles}
           <link href="http://lib.baomitu.com/antd/3.2.1/antd.min.css" rel="stylesheet" />
+          <link href="http://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet" />
         </Head>
         <body>
           {this.props.customValue}
