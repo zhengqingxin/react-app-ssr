@@ -7,7 +7,7 @@
 * 状态管理
   * [redux](https://github.com/reactjs/redux)
   * [redux-saga](https://github.com/redux-saga/redux-saga)
-* css
+* css
   * [style-jsx](https://github.com/zeit/styled-jsx)
   * sass/less
 * UI 组件
