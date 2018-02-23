@@ -8,3 +8,4 @@
       .btn-wrapper > :global(.test){color:red;}
   `}</style>
 ```
+* [首页样式闪烁的问题](https://github.com/zeit/styled-jsx/issues/396)

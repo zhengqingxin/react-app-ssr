@@ -48,7 +48,6 @@ class Index extends React.Component {
           }
         `}
         </style>
-
       </main>
     )
   }
