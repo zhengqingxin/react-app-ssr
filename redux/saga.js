@@ -4,11 +4,12 @@ import request from 'utils/request'
 import config from 'utils/config'
 
 function* getList(action) {
+  yield put({ type: 'SAVE', payload: { loading: true } })
   const list = yield call(request, {
     url: config.api.getFavoriteByUser,
     data: action.payload
   })
-  yield put({ type: 'GET_LIST', list })
+  yield put({ type: 'SAVE', payload: { list, loading: false } })
 }
 
 export default function* rootSaga() {

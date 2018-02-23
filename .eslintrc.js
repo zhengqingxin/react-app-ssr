@@ -19,7 +19,10 @@ module.exports = {
     'react/forbid-prop-types': 0,
     'react/prop-types': 0,
     'no-console': 1,
+    'keyword-spacing':1,
+    'eol-last':0,
     'no-unused-vars':1,
+    'space-before-blocks':1,
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
   },
 }

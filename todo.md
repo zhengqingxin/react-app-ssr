@@ -8,4 +8,6 @@
       .btn-wrapper > :global(.test){color:red;}
   `}</style>
 ```
-* [首页样式闪烁的问题](https://github.com/zeit/styled-jsx/issues/396)
+* ~~[首页样式闪烁的问题](https://github.com/zeit/styled-jsx/issues/396)~~
+* class 里 this 问题
+* 全局 loading?

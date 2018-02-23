@@ -11,16 +11,21 @@ import stylesheet from '../styles/index/index.less'
 @bindRedux
 @connect(({ home }) => home)
 class Index extends React.Component {
-  static async getInitialProps({ store }) {
-    return { list: [] }
-    // const pre = Date.now()
-    // const list = await request({
-    //   url: config.api.getFavoriteByUser,
-    //   data: { user: store.getState().home.user }
-    // })
-    // console.log('耗时：')
-    // console.log(Date.now() - pre)
-    // return { list }
+  // static async getInitialProps({ store }) {
+  //   return { list: [] }
+  //   // const pre = Date.now()
+  //   // const list = await request({
+  //   //   url: config.api.getFavoriteByUser,
+  //   //   data: { user: store.getState().home.user }
+  //   // })
+  //   // console.log('耗时：')
+  //   // console.log(Date.now() - pre)
+  //   // return { list }
+  // }
+
+  constructor() {
+    super()
+    this.handleSearch = this.handleSearch.bind(this)
   }
 
   componentDidMount() {
@@ -36,8 +41,8 @@ class Index extends React.Component {
       <main>
         <Menu />
         <section className="container">
-          <Search onSearch={this.handleSearch} />
-          <List data={this.props.list || []} />
+          <Search onSearch={this.handleSearch} defaultValue={this.props.user} />
+          <List loading={this.props.loading} data={this.props.list || []} />
         </section>
 
         <style jsx global>{stylesheet}</style>

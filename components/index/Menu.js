@@ -2,8 +2,7 @@ import Link from 'next/link'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 
-Router.onRouteChangeStart = (url) => {
-  console.log(`redirect to ${url}`)
+Router.onRouteChangeStart = () => {
   NProgress.start()
 }
 Router.onRouteChangeComplete = () => NProgress.done()
@@ -20,17 +19,17 @@ export default () => {
       </ul>
       <style jsx>
         {`
-            ul{
-              display:flex;
-              width:1150px;
-              height:100%;
-              margin:0 auto;
-              align-items:center;
-            }
-            li{
-              display:block;
-              margin-right:26px;
-            }
+          ul{
+            display:flex;
+            width:1150px;
+            height:100%;
+            margin:0 auto;
+            align-items:center;
+          }
+          li{
+            display:block;
+            margin-right:26px;
+          }
         `}
       </style>
     </div>

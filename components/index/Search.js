@@ -2,11 +2,11 @@ import { Input, Row, Col } from 'antd'
 
 const Search = Input.Search
 
-export default ({ onSearch }) => {
+export default (props) => {
   return (
     <Row>
       <Col span={6}>
-        <Search onSearch={onSearch} placeholder="请输入用户名" />
+        <Search {...props} placeholder="请输入用户名" />
       </Col>
     </Row>
   )

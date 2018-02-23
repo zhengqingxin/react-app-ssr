@@ -4,8 +4,8 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'GET_LIST':
-      return { ...state, list: action.list }
+    case 'SAVE':
+      return { ...state, ...action.payload }
     default:
       return state
   }
