@@ -1,15 +1,14 @@
 import React from 'react'
 import bindRedux from 'bindRedux'
+import layout from 'components/Layout'
 import { connect } from 'react-redux'
-import Menu from 'components/index/Menu'
 import List from 'components/index/List'
 import Search from 'components/index/Search'
-import stylesheet from '../styles/index/index.less'
 // import request from 'utils/request'
 // import config from 'utils/config'
-
 @bindRedux
 @connect(({ home }) => home)
+@layout
 class Index extends React.Component {
   // static async getInitialProps({ store }) {
   //   return { list: [] }
@@ -33,26 +32,17 @@ class Index extends React.Component {
   }
 
   handleSearch(val) {
+    if (!val) return
     this.props.dispatch({ type: 'GET_LIST_ASYNC', payload: { user: val.trim() } })
   }
 
   render() {
     return (
       <main>
-        <Menu />
         <section className="container">
           <Search onSearch={this.handleSearch} defaultValue={this.props.user} />
           <List loading={this.props.loading} data={this.props.list || []} />
         </section>
-
-        <style jsx global>{stylesheet}</style>
-        <style jsx>{`
-          .container{
-            width:1150px;
-            margin:0 auto;
-          }
-        `}
-        </style>
       </main>
     )
   }

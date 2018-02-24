@@ -8,6 +8,7 @@
         "alias": {
           "components": "./components",
           "utils": "./utils",
+          "styles":"./styles",
           "bindRedux":"./redux/store"
         }
       }

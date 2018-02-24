@@ -4,6 +4,7 @@
 
 * [next.js](https://github.com/zeit/next.js)
 * [react](https://github.com/facebook/react)
+* [koa](https://github.com/koajs/koa)
 * 状态管理
   * [redux](https://github.com/reactjs/redux)
   * [redux-saga](https://github.com/redux-saga/redux-saga)
@@ -17,3 +18,6 @@
   * babel
   * ...
 * 代码审查：[eslint](https://github.com/eslint/eslint)
+* 线上
+  * pm2
+  * nginx
