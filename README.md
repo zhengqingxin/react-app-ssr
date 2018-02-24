@@ -4,7 +4,7 @@
 
 * [next.js](https://github.com/zeit/next.js)
 * [react](https://github.com/facebook/react)
-* [koa](https://github.com/koajs/koa)
+* [koa](https://github.com/koajs/koa)
 * 状态管理
   * [redux](https://github.com/reactjs/redux)
   * [redux-saga](https://github.com/redux-saga/redux-saga)
