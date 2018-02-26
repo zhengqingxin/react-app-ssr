@@ -4,15 +4,16 @@ import { List, Avatar, Spin } from 'antd'
 const DataList = (props) => {
   return (
     <section>
-      <div className="label">这是一个列表</div>
+      {/* <div className="label">关注列表</div> */}
       <Spin spinning={props.loading}>
         <List
+          style={{ marginTop: 15 }}
           itemLayout="horizontal"
           dataSource={props.data}
           renderItem={item => (
             <List.Item>
               <List.Item.Meta
-                avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+                avatar={<Avatar src={item.owner.avatar_url} />}
                 title={<a target="_blank" href={item.html_url}>{item.name}</a>}
                 description={item.description}
               />

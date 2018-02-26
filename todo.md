@@ -9,8 +9,8 @@
   `}</style>
 ```
 * ~~[首页样式闪烁的问题](https://github.com/zeit/styled-jsx/issues/396)~~
-* class 里 this 问题
+* ~~class 里 this 问题~~
 * 全局 loading?
-* layout 问题
+* ~~layout 问题~~
   * [_document中不可以处理](https://github.com/zeit/next.js/issues/1874)
   * 用 HOC + decorator 实现

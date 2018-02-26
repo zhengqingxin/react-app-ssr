@@ -1,4 +1,4 @@
-import Menu from 'components/index/Menu'
+import Menu from './Menu'
 import stylesheet from 'styles/index.less'
 
 function withLayout(WrappedComponent) {

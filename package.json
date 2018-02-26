@@ -2,9 +2,9 @@
   "name": "custom-server-koa",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node server.js",
+    "start": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "release": "next build && NODE_ENV=production node server.js"
   },
   "dependencies": {
     "antd": "^3.0.2",
