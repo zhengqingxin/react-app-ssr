@@ -1,12 +1,4 @@
 import Link from 'next/link'
-import NProgress from 'nprogress'
-import Router from 'next/router'
-
-Router.onRouteChangeStart = () => {
-  NProgress.start()
-}
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
 
 export default () => {
   return (
@@ -20,7 +12,7 @@ export default () => {
       <style jsx>
         {`
           .menu{
-            background:pink;
+            background:#00ae66;
             height:40px;
             margin-bottom:30px;
           }
@@ -34,6 +26,12 @@ export default () => {
           li{
             display:block;
             margin-right:26px;
+          }
+          a{
+            color:#fff;
+          }
+          a:hover{
+            color:#00e184;
           }
         `}
       </style>

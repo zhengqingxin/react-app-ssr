@@ -1,7 +1,6 @@
 import axios from 'axios'
 import qs from 'qs'
 import { baseURL } from './config'
-import lodash from 'lodash'
 import { message } from 'antd'
 import pathToRegexp from 'path-to-regexp'
 
@@ -14,7 +13,8 @@ const fetch = (options) => {
   } = options
   let { url } = options
 
-  const cloneData = lodash.cloneDeep(data) || {}
+  // const cloneData = lodash.cloneDeep(data) || {}
+  const cloneData = data
   const toPath = pathToRegexp.compile(url)
   url = toPath(cloneData)
 
