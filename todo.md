@@ -15,3 +15,4 @@
   * [_document中不可以处理](https://github.com/zeit/next.js/issues/1874)
   * 用 HOC + decorator 实现
 * ~~analyze~~
+* dynamic imports

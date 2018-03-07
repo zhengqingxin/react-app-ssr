@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
+    "lint-fix": "eslint --fix *.js",
     "build": "next build",
     "release": "next build && NODE_ENV=production  node server.js",
     "analyze": "cross-env ANALYZE=1 next build && cat .next/stats.txt"

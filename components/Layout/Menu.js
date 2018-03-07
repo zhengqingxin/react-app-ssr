@@ -1,16 +1,22 @@
-import Link from 'next/link'
+import Link from './Link'
 
 export default () => {
   return (
     <div className="menu">
       <ul>
-        <li><Link prefetch href="/"><a>首页</a></Link></li>
-        <li><Link prefetch href="/a"><a>菜单一</a></Link></li>
-        <li><Link prefetch href="/b"><a>菜单二</a></Link></li>
+        <li><Link activeClassName="active" prefetch href="/"><a>首页</a></Link></li>
+        <li><Link activeClassName="active" prefetch href="/a"><a>菜单一</a></Link></li>
+        <li><Link activeClassName="active" prefetch href="/b"><a>菜单二</a></Link></li>
         <li><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer">菜单三</a></li>
       </ul>
       <style jsx>
         {`
+          .active {
+            color:#ff6700;
+          }
+          .active:hover {
+            color:#ff6700;
+          }
           .menu{
             background:#00ae66;
             height:40px;
