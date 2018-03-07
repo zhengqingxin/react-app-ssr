@@ -8,8 +8,10 @@
         "alias": {
           "components": "./components",
           "utils": "./utils",
+          "constants": "./utils/constants",
           "styles":"./styles",
-          "bindRedux":"./redux/store"
+          "bindRedux":"./redux/store",
+          "actions":"./redux/actions"          
         }
       }
     ],

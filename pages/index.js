@@ -4,6 +4,7 @@ import layout from 'components/Layout'
 import { connect } from 'react-redux'
 import List from 'components/index/List'
 import Search from 'components/index/Search'
+import { getList } from 'actions/home'
 // import request from 'utils/request'
 // import config from 'utils/config'
 @bindRedux
@@ -28,7 +29,8 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    this.props.dispatch({ type: 'GET_LIST_ASYNC', payload: { user: this.props.user } })
+    this.props.dispatch(getList(this.props.user))
+    // this.props.dispatch({ type: 'GET_LIST_ASYNC', payload: { user: this.props.user } })
   }
 
   handleSearch(val) {
