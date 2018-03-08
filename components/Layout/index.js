@@ -1,3 +1,4 @@
+import ErrorBoundary from 'components/ErrorBoundary'
 import Menu from './Menu'
 import stylesheet from 'styles/index.less'
 import NProgress from 'nprogress'
@@ -9,11 +10,10 @@ Router.onRouteChangeStart = () => {
 Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
-
 function withLayout(WrappedComponent) {
   return (props) => {
     return (
-      <div>
+      <ErrorBoundary>
         <Menu />
         <main className="container">
           <WrappedComponent {...props} />
@@ -26,7 +26,7 @@ function withLayout(WrappedComponent) {
           }
         `}
         </style>
-      </div>
+      </ErrorBoundary>
     )
   }
 }
