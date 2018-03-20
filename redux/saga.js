@@ -1,17 +1,15 @@
 import { takeEvery } from 'redux-saga'
-import { put, call } from 'redux-saga/effects'
-import request from 'utils/request'
-import config from 'utils/config'
-
-function* getList(action) {
-  yield put({ type: 'SAVE', payload: { loading: true } })
-  const list = yield call(request, {
-    url: config.api.getFavoriteByUser,
-    data: action.payload
-  })
-  yield put({ type: 'SAVE', payload: { list, loading: false } })
-}
+import * as sagas from './sagas'
 
 export default function* rootSaga() {
-  yield takeEvery('GET_LIST_ASYNC', getList)
+  const keys = Object.keys(sagas)
+
+  for (let i = 0; i < keys.length; i++) {
+    const sagaItem = sagas[keys[i]]
+    const namespace = keys[i].toLowerCase()
+    const eKeys = Object.keys(sagaItem)
+    for (let j = 0; j < eKeys.length; j++) {
+      yield takeEvery(`${namespace}/${eKeys[j]}`, sagaItem[eKeys[j]])
+    }
+  }
 }

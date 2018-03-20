@@ -5,6 +5,7 @@ export default () => {
     <div className="menu">
       <ul>
         <li><Link activeClassName="active" prefetch href="/"><a>首页</a></Link></li>
+        <li><Link activeClassName="active" prefetch href="/other"><a>首页2</a></Link></li>        
         <li><Link activeClassName="active" prefetch href="/a"><a>菜单一</a></Link></li>
         <li><Link activeClassName="active" prefetch href="/b"><a>菜单二</a></Link></li>
         <li><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer">菜单三</a></li>

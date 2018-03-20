@@ -8,7 +8,7 @@ import Search from 'components/index/Search'
 // import request from 'utils/request'
 // import config from 'utils/config'
 @bindRedux
-@connect(({ namespace1 }) => namespace1)
+@connect(({ namespace2 }) => namespace2)
 @layout
 class Index extends React.Component {
   // static async getInitialProps({ store }) {
@@ -29,13 +29,12 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    this.props.dispatch({ type: 'namespace1/getList', payload: { user: this.props.user } })
-    this.props.dispatch({ type: 'namespace1/test' })
+    this.props.dispatch({ type: 'namespace2/getList', payload: { user: this.props.user } })
   }
 
   handleSearch(val) {
     if (!val) return
-    this.props.dispatch({ type: 'namespace1/getList', payload: { user: val.trim() } })
+    this.props.dispatch({ type: 'namespace2/getList', payload: { user: val.trim() } })
   }
 
   render() {

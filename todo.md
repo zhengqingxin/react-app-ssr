@@ -17,3 +17,4 @@
 * ~~analyze~~
 * dynamic imports
 * ~~[ant-design 定制主题](https://github.com/aoc/with-ant-design-custom-theme)~~
+* ~~babel-plugin-wildcard 缓存bug：`rm -r node_modules/.cache/babel-loader` 解决~~

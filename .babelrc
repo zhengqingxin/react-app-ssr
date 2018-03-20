@@ -2,6 +2,7 @@
   "presets": ["next/babel"],
   "plugins": [
     "transform-decorators-legacy",
+    "wildcard",
     [
       "module-resolver",
       {

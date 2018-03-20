@@ -5,6 +5,9 @@ module.exports = {
   ],
   rules: {
     'semi': [1, 'never'],
+    'object-shorthand':0,
+    'no-trailing-spaces':0,
+    'no-plusplus':0,
     'comma-dangle': 0,
     'arrow-body-style': 0,
     'prefer-destructuring': 0,
@@ -22,6 +25,7 @@ module.exports = {
     'react/prop-types': 0,
     'no-param-reassign': 0,
     'global-require':0,
+    'arrow-parens':0,
     'no-console': 1,
     'keyword-spacing':1,
     'eol-last':0,
