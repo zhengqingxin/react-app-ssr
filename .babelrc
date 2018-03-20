@@ -15,6 +15,12 @@
         }
       }
     ],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["less$"]
+      }
+    ],
     ["import", { "libraryName": "antd" }]
   ],
   "ignore": []

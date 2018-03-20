@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import List from 'components/index/List'
 import Search from 'components/index/Search'
 import { getList } from 'actions/home'
+
 // import request from 'utils/request'
 // import config from 'utils/config'
 @bindRedux
